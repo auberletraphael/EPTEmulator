@@ -18,7 +18,6 @@ var physical = require('./logical-layer.class.js')
     .listen('8001');
 
 console.log('');
-console.log('');
 console.log('+---------------------------------------------------------------+');
 console.log('|                         EPT emulator                          |');
 console.log('|      Concert Protocole, aka "Protocole Caisse" in french.     |');
