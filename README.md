@@ -17,6 +17,21 @@ This project aims to replace a real EPT, real bank cards, etc. substituting the 
 
 Note that this project is provided "AS-IS" and if your software works out with it, this is not a proof that it will work with real EPTs...
 
+First of all
+=============
+
+Using NPM:
+
+```
+$ npm install ept-emulator
+```
+
+Using Git, if you did that...
+
+```
+$ git clone https://github.com/libre-informatique/EPTEmulator .
+$ npm update
+```
 
 The server side tests
 ======================
