@@ -1,6 +1,6 @@
 {
   "name": "ept-emulator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Electronic Payment Terminal emulator (using websockets and the 'Concert Protocol' aka 'Protocole Caisse', from Ingenico)",
   "main": "logical-layer.class.js",
   "dependencies": {
