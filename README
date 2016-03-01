@@ -1,0 +1,10 @@
+TESTING
+========
+
+In two terminals, you can run :
+
+1. The EPT
+$ nodejs logical-server.js
+
+2. The fake app
+$ nodejs logical-client.js
