@@ -86,8 +86,8 @@ $ node application-client.console.js
 
 Do not hesitate to edit and modify the ```application-client.*.js``` files to fit your own environments & tests
 
-Integrating your own web-app using those libraries
-===================================================
+Integrating those libraries into your own web-app
+==================================================
 
 Refer to this the [index.html](index.html) webpage for your own integration.
 Note that our libraries are compatible with nodejs & browsers for the client side, and with nodejs only for the server side.
