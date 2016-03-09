@@ -37,6 +37,9 @@ var PhysicalLayer = {
             console.log("New connection");
             PhysicalLayer.prepareTransmission();
         }],
+        connectError: [function(error){
+            console.error('CONNECTION ERROR to the ept-emulator', error);
+        }],
         clientConnection: [function(socket){
             console.log("Connected");
             PhysicalLayer.prepareTransmission();
@@ -123,6 +126,9 @@ var PhysicalLayer = {
         PhysicalLayer.socket = nodejs ? require('socket.io-client')(url) : io(url);
         PhysicalLayer.socket.on('connect', function(){
             PhysicalLayer._call('clientConnection', PhysicalLayer.socket);
+        });
+        PhysicalLayer.socket.on('connect_error', function(error){
+            PhysicalLayer._call('connectError', error);
         });
         PhysicalLayer.socket.on('disconnect', PhysicalLayer.events.close);
         PhysicalLayer.socket.on('serial', PhysicalLayer.events.binary);
