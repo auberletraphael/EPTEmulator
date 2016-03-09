@@ -104,6 +104,9 @@ var PhysicalLayer = {
         }],
         stxReceivedLengthControl: [function(){
             return true;
+        }],
+        send: [function(data){
+            PhysicalLayer.socket.emit('serial', data);
         }]
     },
     
@@ -362,7 +365,7 @@ PhysicalLayer.events = {
         {
             if ( action !== null )
             {
-                PhysicalLayer.socket.emit('serial', ProtocolHelpers.Physical.encode(action));
+                PhysicalLayer._call('send', ProtocolHelpers.Physical.encode(action));
                 PhysicalLayer._call('sendingRawData', action);
             }
             if ( rawState !== undefined )
@@ -378,14 +381,14 @@ PhysicalLayer.events = {
         case 'stx':
             var tmp = ProtocolHelpers.Physical.getFrame(message);
             PhysicalLayer._call('stxBeforeSending', { state: action[0], message: message, frame: tmp }); // hook
-            PhysicalLayer.socket.emit('serial', tmp);
+            PhysicalLayer._call('send', tmp); // hook
             PhysicalLayer._call('stxSent', message); // hook
             break;
         case 'eot':
             nextMode = null;
         default:
             // the data, forged
-            PhysicalLayer.socket.emit('serial',ProtocolHelpers.Physical.encode(action[1]));
+            PhysicalLayer._call('send', ProtocolHelpers.Physical.encode(action[1])); // hook
             PhysicalLayer._call('sendingData', action[0]);
             break;
         }

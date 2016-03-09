@@ -57,13 +57,25 @@ var ApplicationLayer = function(interactive, pos, currency, mod, type, ind) {
         .on('stxReceived', function(message){
             var result = application.logical.processResponse(message);
             
-            console.info('---- application -----------');
-            console.info(' ', result.stat == '0' ? 'Success :)' : '!! Failed !!');
-            console.info('  Result:', result);
-            console.info('----------------------------');
+            application.logical.physical._call(result.stat == '0' ? 'applicationSuccess' : 'applicationFailure', result);
 
             if ( application.interactive )
                 application.prepareTransaction();
+        })
+        
+        .on('applicationSuccess', function(result){
+            console.info('---- application -----------');
+            console.info('  Success :)');
+            console.info('  Result:', result);
+            console.info('----------------------------');
+            
+        })
+        .on('applicationFailure', function(result){
+            console.info('---- application -----------');
+            console.info('  !! Failed !!');
+            console.info('  Result:', result);
+            console.info('----------------------------');
+            
         })
     ;
 }

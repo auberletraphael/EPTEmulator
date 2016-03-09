@@ -17,7 +17,10 @@
     "EPT",
     "Emulator"
   ],
-  "author": "Libre Informatique <contact@libre-informatique.fr>",
+  "author": {
+    "name": "Libre Informatique",
+    "email": "contact@libre-informatique.fr"
+  },
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
@@ -26,5 +29,36 @@
   "bugs": {
     "url": "https://github.com/libre-informatique/EPTEmulator/issues"
   },
-  "homepage": "https://github.com/libre-informatique/EPTEmulator#readme"
+  "homepage": "https://github.com/libre-informatique/EPTEmulator#readme",
+  "gitHead": "19e354547abde1d24d6f78a657396b99ed3ce383",
+  "_id": "ept-emulator@1.0.2",
+  "_shasum": "adf6b237289d8052963a26cd6fbe7dc7e5db307c",
+  "_from": "ept-emulator@latest",
+  "_npmVersion": "2.14.12",
+  "_nodeVersion": "4.3.1",
+  "_npmUser": {
+    "name": "betaglop",
+    "email": "beta@e-glop.net"
+  },
+  "dist": {
+    "shasum": "adf6b237289d8052963a26cd6fbe7dc7e5db307c",
+    "tarball": "http://registry.npmjs.org/ept-emulator/-/ept-emulator-1.0.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "betaglop",
+      "email": "beta@e-glop.net"
+    },
+    {
+      "name": "marcoslibre",
+      "email": "marcos.bezerra@libre-informatique.fr"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-13-west.internal.npmjs.com",
+    "tmp": "tmp/ept-emulator-1.0.2.tgz_1456872283488_0.5876089916564524"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/ept-emulator/-/ept-emulator-1.0.2.tgz",
+  "readme": "ERROR: No README data found!"
 }
